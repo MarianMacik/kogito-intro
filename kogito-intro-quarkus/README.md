@@ -31,6 +31,16 @@ If you want to build an _über-jar_, execute the following command:
 
 The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
 
+## Test your application
+
+Generated application comes with sample test process that allows you to verify if the application is working as expected. Simply execute following command to try it out
+
+```sh
+curl -X POST -w "\n" -H Content-Type:application/json -d {\"amount\":5000} localhost:8080/LoanApplication
+```
+
+Once successfully invoked you should see "Mortgage has been APPROVED" for amount <4999 and "Mortgage has been DECLINED" for amount > 5000 in the console of the running application.
+
 ## Creating a native executable
 
 You can create a native executable using: 
