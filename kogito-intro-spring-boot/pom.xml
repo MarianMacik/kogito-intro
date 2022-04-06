@@ -21,7 +21,7 @@
     <!-- Skip tests by default -->
     <skipTests>true</skipTests>
     <java.version>11</java.version>
-    <kogito.version>1.16.1.Final</kogito.version>
+    <kogito.version>1.17.0.Final</kogito.version>
   </properties>
 
   <dependencyManagement>

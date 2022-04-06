@@ -1,4 +1,4 @@
-# org.kie.kogito.kogito-spring-boot-archetype - 1.16.1.Final #
+# org.kie.kogito.kogito-spring-boot-archetype - 1.17.0.Final #
 
 # Running
 
