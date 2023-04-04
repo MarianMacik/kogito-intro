@@ -30,7 +30,7 @@ public class LoanApplicationProcessTest {
 
     @BeforeEach
     public void setup() {
-        loanProcess.instances().values(ProcessInstanceReadMode.MUTABLE).forEach(pi -> pi.abort());
+        loanProcess.instances().stream(ProcessInstanceReadMode.MUTABLE).forEach(pi -> pi.abort());
     }
 
     @Test
@@ -52,7 +52,7 @@ public class LoanApplicationProcessTest {
         assertTrue((boolean)(result.toMap().get("approved")));
 
         // no active process instances
-        assertEquals(0, loanProcess.instances().size());
+        assertEquals(0, loanProcess.instances().stream().count());
     }
 
     @Test
@@ -74,7 +74,7 @@ public class LoanApplicationProcessTest {
         assertFalse((boolean)(result.toMap().get("approved")));
 
         // no active process instances
-        assertEquals(0, loanProcess.instances().size());
+        assertEquals(0, loanProcess.instances().stream().count());
     }
 
 }

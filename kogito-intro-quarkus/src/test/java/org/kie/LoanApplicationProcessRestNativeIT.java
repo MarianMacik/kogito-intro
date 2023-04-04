@@ -1,8 +1,8 @@
 package org.kie;
 
-import io.quarkus.test.junit.NativeImageTest;
+import io.quarkus.test.junit.QuarkusIntegrationTest;
 
-@NativeImageTest
+@QuarkusIntegrationTest
 public class LoanApplicationProcessRestNativeIT extends LoanApplicationProcessRestTest{
-    
+
 }
